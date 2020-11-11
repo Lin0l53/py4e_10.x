@@ -1,0 +1,19 @@
+fname = "mbox-short.txt"
+handle = open(fname) 
+counter = dict()
+for line in handle :
+	if line.startswith("From:")  :
+		line = line.rstrip()
+		print (line)
+		words = line.split()
+		sender = words[1]
+		pos = sender.find(";")
+		email = sender[pos+1:]
+		print (email)
+		counter[email] = counter.get(email,0) + 1
+	
+templst = list[]
+
+			
+
+print (counter)
